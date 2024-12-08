@@ -1,0 +1,104 @@
+/* font-family: "Figtree", serif; */
+/* font-family: "Lora", serif; */
+.categories h3{
+  font-family: "Lora", serif;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #ff5500;
+  color: #fff !important; 
+  width: 40px !important; 
+  height: 40px !important; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; 
+  font-size: 15px !important; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1rem !important; 
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #e34b00; 
+  color: #fff;
+}
+
+.swiper-button-next {
+  right: 10px !important; 
+}
+
+.swiper-button-prev {
+  left: 10px !important;
+}
+
+  .custom-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px;
+    height: 60vh;
+  }
+  
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 15px #c0c0c0 !important;
+  }
+  
+  .custom-grid-container .grid-item:nth-child(1),
+  .custom-grid-container .grid-item:nth-child(3),
+  .custom-grid-container .grid-item:nth-child(7),
+  .custom-grid-container .grid-item:nth-child(6),
+  .custom-grid-container .grid-item:nth-child(7),
+  .custom-grid-container .grid-item:nth-child(8){
+    grid-column: span 1; 
+    grid-row: span 1; 
+  }
+  
+  .custom-grid-container .grid-item:nth-child(2),
+  .custom-grid-container .grid-item:nth-child(4),
+  .custom-grid-container .grid-item:nth-child(5){
+    grid-column: span 1; 
+    grid-row: span 2;
+  }
+  
+  .grid-item img:hover {
+    transform: scale(1.05); 
+  }
+
+  .deals h3, .deals h4{
+    font-family: "Lora", serif;
+  }
+
+  .deals h6{
+    color: #e34b00;
+    line-height: 1.5rem;
+  }
+
+  .deals h6 span{
+    color: #a9a9a9;
+  }
+
+  .rating-stars {
+    font-size: 1.2em; 
+    color: #ff7518;    
+    margin-top: 10px;  
+  }
+
+  .deals .badge{
+    background: #ff7518;
+    font-size: 1rem;
+  }

@@ -1,0 +1,28 @@
+.carousel-control-prev {
+  left: 20px; 
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-next {
+  right: 20px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #333; 
+  font-size: 0.8rem !important;
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+  
