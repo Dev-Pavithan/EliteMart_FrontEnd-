@@ -28,7 +28,7 @@ const Header = () => {
                 <i className="bi bi-person fs-4 me-2"></i>
                 <div>
                   <span className="d-block">Your Account</span>
-                    <a href="#" className="text-decoration-none">
+                    <a href="/login" className="text-decoration-none">
                       Login / Register
                     </a>
                 </div>

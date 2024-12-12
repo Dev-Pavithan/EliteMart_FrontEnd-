@@ -13,7 +13,7 @@ const Footer = () => {
                     {/* Contact Us Section */}
                     <Col md={3}>
                         <img src={Logo} alt="logo" />
-                        <h4 className='fw-bold' style={{fontFamily: "Lora"}}>Contact Us</h4>
+                        <h4 className='fw-bold' style={{ fontFamily: "Lora" }}>Contact Us</h4>
                         <p>elitemart@gmail.com</p>
                         {/* Social Media Icons */}
                         <a href="www.facebook.com" className="social-icons me-2">
@@ -32,18 +32,7 @@ const Footer = () => {
 
                     {/* Our Services Section */}
                     <Col md={2}>
-                        <h5 className='fw-bold' style={{fontFamily: "Lora"}}>Our Services</h5>
-                        <ul className="list-unstyled">
-                            <li>Home</li>
-                            <li>About Us</li>
-                            <li>Products</li>
-                            <li>Contact Us</li>
-                        </ul>
-                    </Col>
-
-                    {/* Quick Links Section */}
-                    <Col md={2}>
-                        <h5 className='fw-bold' style={{fontFamily: "Lora"}}>Quick Links</h5>
+                        <h5 className='fw-bold' style={{ fontFamily: "Lora" }}>Our Services</h5>
                         <ul className="list-unstyled">
                             <li>Knowledge Base</li>
                             <li>Hire An Expert</li>
@@ -52,13 +41,25 @@ const Footer = () => {
                         </ul>
                     </Col>
 
+                    {/* Quick Links Section */}
+                    <Col md={2}>
+                        <h5 className='fw-bold' style={{ fontFamily: "Lora" }}>Quick Links</h5>
+                        <ul className="list-unstyled">
+
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li>Products</li>
+                            <li>Contact Us</li>
+                        </ul>
+                    </Col>
+
                     {/* Subscribe Section */}
                     <Col md={5}>
-                      <h2 className='mb-3 fw-bold' style={{fontFamily: "Lora"}}>Subscribe Our Newsletter</h2>
-                      <p style={{textAlign: 'justify'}}>
-                        Subscribe to Elite Mart's newsletter for the latest updates on products, 
-                        and exclusive offers. Stay tuned and ahead in the fast world!
-                      </p>
+                        <h2 className='mb-3 fw-bold' style={{ fontFamily: "Lora" }}>Subscribe Our Newsletter</h2>
+                        <p style={{ textAlign: 'justify' }}>
+                            Subscribe to Elite Mart's newsletter for the latest updates on products,
+                            and exclusive offers. Stay tuned and ahead in the fast world!
+                        </p>
                         <div className="subscribe-container d-flex justify-content-center align-items-center my-4">
                             <InputGroup className="subscribe-box">
                                 <Form.Control
@@ -67,7 +68,7 @@ const Footer = () => {
                                     aria-label="Email address"
                                     className="subscribe-input"
                                 />
-                                <ButtonGlobal text='Subscribe'/>
+                                <ButtonGlobal text='Subscribe' />
                             </InputGroup>
                         </div>
                     </Col>

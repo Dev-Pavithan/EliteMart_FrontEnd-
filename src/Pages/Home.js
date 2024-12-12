@@ -29,17 +29,17 @@ import Deal2 from '../Assets/Images/deal2.jpg';
 
 const Home = () => {
   const categories = [
-    { id: 1, title: 'Beauty & Health', image: Category2 },
-    { id: 2, title: 'Jewels Accessories', image: Category4 },
-    { id: 3, title: 'Babies & Kids', image: Category5 },
-    { id: 4, title: 'Toys & Games', image: Category6 },
-    { id: 5, title: 'Home Appliances', image: Category1 },
-    { id: 6, title: 'Tools & Industrials', image: Category7 },
-    { id: 7, title: 'Cloths', image: Category8 },
-    { id: 8, title: 'Furnitures', image: Category9 },
-    { id: 9, title: 'Home Improvements', image: Category10 },
-    { id: 10, title: 'Herbals', image: Category11 },
-    { id: 11, title: 'Consumer Electronics', image: Category3 },
+    { id: 1, title:  'Beauty & Health',       image: Category2 },
+    { id: 2, title:  'Jewels Accessories',    image: Category4 },
+    { id: 3, title:  'Babies & Kids',         image: Category5 },
+    { id: 4, title:  'Toys & Games',          image: Category6 },
+    { id: 5, title:  'Home Appliances',       image: Category1 },
+    { id: 6, title:  'Tools & Industrials',   image: Category7 },
+    { id: 7, title:  'Cloths',                image: Category8 },
+    { id: 8, title:  'Furnitures',            image: Category9 },
+    { id: 9, title:  'Home Improvements',     image: Category10 },
+    { id: 10, title: 'Herbals',               image: Category11 },
+    { id: 11, title: 'Consumer Electronics',  image: Category3 },
   ];
 
   return (

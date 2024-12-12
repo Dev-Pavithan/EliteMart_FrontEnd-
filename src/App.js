@@ -7,6 +7,11 @@ import Home from './Pages/Home';
 import Product from './Pages/Product';
 import ContactUs from './Pages/ContactUs';
 import Header from '../src/Components/Header/Header';
+import Login from '../src/Components/Login/Login.js';
+import Register from '../src/Components/Register/Register.js';
+
+
+
 import Footer from '../src/Components/Footer/Footer';
 
 function App() {
@@ -18,6 +23,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+
+
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
         <Footer />
