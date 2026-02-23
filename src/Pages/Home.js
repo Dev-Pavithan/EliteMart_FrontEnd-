@@ -143,7 +143,7 @@ const Home = () => {
             alignItems: 'center', 
           }}
         >
-          <p style={{color: '#fff', textAlign: 'center'}} className='m-0 fw-bold'>Welcome to Elite Mart! Wrap new offers/gifts everyday on weekends - New coupon code: EliteMart2024</p>
+          <p style={{color: '#fff', textAlign: 'center'}} className='m-0 fw-bold'>Welcome to Elite Mart! Wrap new offers/gifts everyday on weekends - New coupon code: EliteMart 2026</p>
         </div>
       </div>
 
