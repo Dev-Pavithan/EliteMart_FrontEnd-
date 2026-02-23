@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react'; // Removed unused useEffect
 import { Container, Row, Col, Form, Navbar, Nav, Button, NavDropdown, Offcanvas } from 'react-bootstrap';
 
 const Header = () => {
-  const [cartItems, setCartItems] = useState(5);
+  const [cartItems] = useState(5); // Removed setCartItems since it's not used
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const [showMobileDropdown, setShowMobileDropdown] = useState(false);
   const dropdownRef = useRef(null);
@@ -12,8 +12,6 @@ const Header = () => {
     setShowMobileDropdown(false);
   };
   const handleShowOffcanvas = () => setShowOffcanvas(true);
-
-
 
   const toggleMobileDropdown = () => {
     setShowMobileDropdown(!showMobileDropdown);
@@ -78,9 +76,8 @@ const Header = () => {
                   </span>
                 )}
                 <div>
-                  <a href="#" className="text-decoration-none fw-bold">
-                    Cart
-                  </a>
+                  {/* Fixed: Changed from href="#" to a proper link or span */}
+                  <span className="fw-bold">Cart</span>
                 </div>
               </div>
             </div>
@@ -88,12 +85,13 @@ const Header = () => {
         </Row>
       </Container>
 
+      {/* Rest of your component remains the same... */}
       {/* Desktop Navigation - Hidden on mobile */}
       <Navbar bg="primary" variant="dark" expand="lg" className="py-2 d-none d-lg-block">
         <Container>
           <Navbar className="mx-auto mb-2 mb-lg-0 d-flex justify-content-between w-100">
             <Nav className="me-auto mb-2 mb-lg-0">
-              <Nav.Link href="#" className="text-white px-2 px-lg-3 active">Home</Nav.Link>
+              <Nav.Link href="/" className="text-white px-2 px-lg-3 active">Home</Nav.Link>
               
               <NavDropdown 
                 title="Collections" 
@@ -102,19 +100,19 @@ const Header = () => {
                 menuVariant="light"
               >
                 {collectionItems.map((item, index) => (
-                  <NavDropdown.Item key={index} href="#">{item}</NavDropdown.Item>
+                  <NavDropdown.Item key={index} href="/collections">{item}</NavDropdown.Item>
                 ))}
               </NavDropdown>
               
-              <Nav.Link href="#" className="text-white px-2 px-lg-3">Features</Nav.Link>
-              <Nav.Link href="#" className="text-white px-2 px-lg-3">Shop</Nav.Link>
-              <Nav.Link href="#" className="text-white px-2 px-lg-3">About Us</Nav.Link>
-              <Nav.Link href="#" className="text-white px-2 px-lg-3">Contact Us</Nav.Link>
+              <Nav.Link href="/features" className="text-white px-2 px-lg-3">Features</Nav.Link>
+              <Nav.Link href="/shop" className="text-white px-2 px-lg-3">Shop</Nav.Link>
+              <Nav.Link href="/about" className="text-white px-2 px-lg-3">About Us</Nav.Link>
+              <Nav.Link href="/contact" className="text-white px-2 px-lg-3">Contact Us</Nav.Link>
             </Nav>
             
             <div className="d-flex flex-column flex-lg-row mt-2 mt-lg-0">
-              <Nav.Link href="#" className="text-white px-2 px-lg-3 py-1">Special Offer</Nav.Link>
-              <Nav.Link href="#" className="text-white px-2 px-lg-3 py-1 ms-0 ms-lg-3">Purchase Theme</Nav.Link>
+              <Nav.Link href="/offers" className="text-white px-2 px-lg-3 py-1">Special Offer</Nav.Link>
+              <Nav.Link href="/purchase" className="text-white px-2 px-lg-3 py-1 ms-0 ms-lg-3">Purchase Theme</Nav.Link>
             </div>
           </Navbar>
         </Container>
@@ -176,7 +174,7 @@ const Header = () => {
         <Offcanvas.Body className="offcanvas-body-custom p-0 d-flex flex-column">
           <Nav className="flex-column mobile-nav flex-grow-1">
             {/* Home Link */}
-            <Nav.Link href="#" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
+            <Nav.Link href="/" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
               <i className="bi bi-house-door me-3"></i>
               <span>Home</span>
             </Nav.Link>
@@ -203,7 +201,7 @@ const Header = () => {
                   {collectionItems.map((item, index) => (
                     <Nav.Link 
                       key={index} 
-                      href="#" 
+                      href="/collections" 
                       className="mobile-dropdown-item py-3 px-4 d-flex align-items-center"
                       onClick={handleCloseOffcanvas}
                     >
@@ -215,37 +213,37 @@ const Header = () => {
             </div>
             
             {/* Features */}
-            <Nav.Link href="#" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
+            <Nav.Link href="/features" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
               <i className="bi bi-star me-3"></i>
               <span>Features</span>
             </Nav.Link>
             
             {/* Shop */}
-            <Nav.Link href="#" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
+            <Nav.Link href="/shop" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
               <i className="bi bi-bag me-3"></i>
               <span>Shop</span>
             </Nav.Link>
             
             {/* About Us */}
-            <Nav.Link href="#" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
+            <Nav.Link href="/about" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
               <i className="bi bi-info-circle me-3"></i>
               <span>About Us</span>
             </Nav.Link>
             
             {/* Contact Us */}
-            <Nav.Link href="#" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
+            <Nav.Link href="/contact" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
               <i className="bi bi-envelope me-3"></i>
               <span>Contact Us</span>
             </Nav.Link>
             
             {/* Special Offer */}
-            <Nav.Link href="#" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
+            <Nav.Link href="/offers" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
               <i className="bi bi-tag me-3"></i>
               <span>Special Offer</span>
             </Nav.Link>
             
             {/* Purchase Theme */}
-            <Nav.Link href="#" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
+            <Nav.Link href="/purchase" className="mobile-nav-link py-4 px-4 d-flex align-items-center justify-content-start" onClick={handleCloseOffcanvas}>
               <i className="bi bi-cart-check me-3"></i>
               <span>Purchase Theme</span>
             </Nav.Link>

@@ -1,4 +1,3 @@
-// Login.jsx
 import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -65,6 +64,13 @@ const Login = () => {
       }
     };
   }, []);
+
+  // Function to handle link clicks without page reload
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+    // Add your navigation logic here if needed
+    console.log('Link clicked');
+  };
 
   return (
 <div className="min-vh-100 d-flex align-items-center justify-content-center">
