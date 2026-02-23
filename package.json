@@ -8,9 +8,9 @@
     "@testing-library/user-event": "^14.6.1",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
-    "react": "^19.2.4",
+    "react": "^18.3.1",
     "react-bootstrap": "^2.10.10",
-    "react-dom": "^19.2.4",
+    "react-dom": "^18.3.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.13.1",
     "react-scripts": "5.0.1",
@@ -43,8 +43,9 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.24",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.2.1"
+    "@tailwindcss/postcss": "^4.2.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
   }
 }
